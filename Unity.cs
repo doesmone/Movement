@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement_normal : MonoBehaviour
+public class Unity : MonoBehaviour
 {
     public float walkingSpeed = 7.5f;
     public float runningSpeed = 11.5f;
@@ -11,9 +11,6 @@ public class Movement_normal : MonoBehaviour
     public Camera playerCamera;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 45.0f;
-
-    private Animator animator;
-
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
@@ -24,7 +21,6 @@ public class Movement_normal : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-        animator = GetComponent<Animator>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
